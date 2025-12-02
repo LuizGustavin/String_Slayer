@@ -1,0 +1,128 @@
+[gd_scene load_steps=9 format=3 uid="uid://d34n8pxg7qwgm"]
+
+[ext_resource type="Texture2D" uid="uid://dwwiyrmih5i2n" path="res://diane-picchiottino-W_dfi26u2U0-unsplash.jpg" id="1_0cn43"]
+[ext_resource type="Texture2D" uid="uid://bk1hp4xxgbef5" path="res://Thegreatsouthern.jpg" id="2_50yby"]
+[ext_resource type="Texture2D" uid="uid://cdc6bsvuw1vun" path="res://eu_quero_uma_logo_de_um_jogo_que_eu_estou_criando__ele_é_tipo_um_guitarhero__mas_o_nome_dele_é__String_slayer_._eu_quero_uma_logo_bem_bonita_e_agressiva_como_sange-removebg-preview.png" id="3_yw17q"]
+[ext_resource type="FontFile" uid="uid://c7kldblwl80i7" path="res://Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/xolonium/xolonium-fonts-4.1/ttf/Xolonium-Bold.ttf" id="4_kj4gb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lc1lo"]
+bg_color = Color(0.5882353, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_right = 5
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_db1x8"]
+bg_color = Color(0.8509804, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+expand_margin_top = 5.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pnlfm"]
+bg_color = Color(0.5882353, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_ll38s"]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/fonts/font = ExtResource("4_kj4gb")
+Button/styles/focus = SubResource("StyleBoxFlat_lc1lo")
+Button/styles/hover = null
+Button/styles/normal = SubResource("StyleBoxFlat_db1x8")
+Button/styles/pressed = SubResource("StyleBoxFlat_pnlfm")
+
+[node name="Tela_Inicio" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Fundo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_0cn43")
+expand_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HboxCotainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HboxCotainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+
+[node name="capa_album" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 738.0
+offset_top = 74.0
+offset_right = 1065.0
+offset_bottom = 390.0
+texture = ExtResource("2_50yby")
+expand_mode = 2
+
+[node name="Game_logo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 6.0
+offset_right = 451.0
+offset_bottom = 392.0
+size_flags_horizontal = 0
+texture = ExtResource("3_yw17q")
+expand_mode = 2
+
+[node name="start" type="Button" parent="."]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 430.0
+offset_right = 282.0
+offset_bottom = 470.0
+theme = SubResource("Theme_ll38s")
+text = "Start"
+icon_alignment = 1
+
+[node name="settings" type="Button" parent="."]
+layout_mode = 0
+offset_left = 98.0
+offset_top = 492.0
+offset_right = 290.0
+offset_bottom = 536.0
+text = "Settings"
+
+[node name="exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 550.0
+offset_right = 284.0
+offset_bottom = 604.0
+text = "Exit"
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 842.0
+offset_top = 407.0
+offset_right = 982.0
+offset_bottom = 442.0
+text = "    10s - Pantera"

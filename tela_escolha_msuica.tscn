@@ -1,0 +1,89 @@
+[gd_scene load_steps=8 format=3 uid="uid://dbpfx2uygi1rk"]
+
+[ext_resource type="Script" uid="uid://b6xugxi3kb6uc" path="res://tela_escolha_msuica.gd" id="1_luy4y"]
+[ext_resource type="Texture2D" uid="uid://cns44n6ovrowj" path="res://Blue & white company profile presentation.png" id="1_osgxp"]
+[ext_resource type="Texture2D" uid="uid://bqeki5k7svhrl" path="res://Design_sem_nome-removebg-preview.png" id="2_vrdu6"]
+[ext_resource type="Texture2D" uid="uid://nghpnvh5q6c4" path="res://war.png" id="3_7r5v0"]
+[ext_resource type="Texture2D" uid="uid://d3lirj2nnxnns" path="res://engrenage.png" id="4_grpdn"]
+[ext_resource type="Texture2D" uid="uid://csbd44bvxc7l7" path="res://b.png" id="5_luy4y"]
+[ext_resource type="FontFile" uid="uid://c7kldblwl80i7" path="res://Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/xolonium/xolonium-fonts-4.1/ttf/Xolonium-Bold.ttf" id="6_grpdn"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_luy4y")
+
+[node name="header" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_osgxp")
+expand_mode = 2
+
+[node name="back_button" type="Button" parent="header"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 7.0
+offset_right = 114.0
+offset_bottom = 90.0
+icon = ExtResource("2_vrdu6")
+flat = true
+
+[node name="guitar_button" type="Button" parent="header"]
+layout_mode = 0
+offset_left = 936.0
+offset_top = 217.0
+offset_right = 1056.0
+offset_bottom = 335.0
+icon = ExtResource("3_7r5v0")
+
+[node name="settings_Button" type="Button" parent="header"]
+layout_mode = 0
+offset_left = 1250.0
+offset_top = 8.0
+offset_right = 1333.0
+offset_bottom = 91.0
+icon = ExtResource("4_grpdn")
+flat = true
+
+[node name="Button" type="Button" parent="header"]
+layout_mode = 0
+offset_left = 1150.0
+offset_top = 217.0
+offset_right = 1268.0
+offset_bottom = 335.0
+icon = ExtResource("5_luy4y")
+
+[node name="play_button" type="Button" parent="header"]
+layout_mode = 0
+offset_left = 1132.0
+offset_top = 684.0
+offset_right = 1339.0
+offset_bottom = 757.0
+theme_override_fonts/font = ExtResource("6_grpdn")
+theme_override_font_sizes/font_size = 40
+text = "Play"
+
+[node name="music_scroll" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 60.0
+offset_top = 185.0
+offset_right = -543.0
+offset_bottom = -183.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="music_list" type="VBoxContainer" parent="music_scroll"]
+layout_mode = 2
+
+[connection signal="pressed" from="header/back_button" to="." method="_on_back_button_menu_pressed"]
